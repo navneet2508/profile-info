@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import ProfileInfo from "../profile-info";
 import axios from "axios";
 import "./index.css";
+import Spinner from "../spinner";
 
 const Index = () => {
   const [profileData, setProfileData] = useState([]);
@@ -37,19 +38,23 @@ const Index = () => {
   return (
     <div className="main-section">
       <h1>User&apos;s Profile</h1>
-      <Row className="py-4 main-section--element">
-        {profileData.map((element) => {
-          return (
-            <Col key={element.id} md={6} xs={12} sm={12} className="my-3">
-              <ProfileInfo
-                element={element}
-                deleteUser={deleteUser}
-                updateUser={updateUser}
-              />
-            </Col>
-          );
-        })}
-      </Row>
+      {profileData.length ? (
+        <Row className="py-4 main-section--element">
+          {profileData.map((element) => {
+            return (
+              <Col key={element.id} md={6} xs={12} sm={12} className="my-3">
+                <ProfileInfo
+                  element={element}
+                  deleteUser={deleteUser}
+                  updateUser={updateUser}
+                />
+              </Col>
+            );
+          })}
+        </Row>
+      ) : (
+        <Spinner />
+      )}
     </div>
   );
 };
