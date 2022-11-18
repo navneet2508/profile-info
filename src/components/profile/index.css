@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Sono:wght@600&display=swap");
+
+.main-section {
+  background-color: #f7eddb;
+}
+
+div h1 {
+  padding-top: 2rem;
+  text-align: center;
+  font-family: "Sono", sans-serif;
+}
+
+/* @media screen and (max-width: 820px) {
+  .main-section--element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+} */
+
+@media screen and (max-width: 1200px) {
+  .main-section--element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
