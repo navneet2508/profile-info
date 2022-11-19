@@ -1,4 +1,4 @@
-### Deployed link - https://profile-info-6t8nbxazg-navneet2508.vercel.app/
+### Deployed link - https://profile-info-a80mmvi0j-navneet2508.vercel.app/
 
 # Getting Started with Create React App
 
